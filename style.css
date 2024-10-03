@@ -98,6 +98,10 @@ footer {
     .btn-github {
         font-size: 0.9rem;
     }
+
+    .overview-section {
+        padding: 0 20px; /*  */
+    }
 }
 
 @media (max-width: 480px) {
