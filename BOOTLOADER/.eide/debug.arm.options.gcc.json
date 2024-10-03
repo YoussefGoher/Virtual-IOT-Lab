@@ -1,0 +1,29 @@
+{
+    "version": 5,
+    "beforeBuildTasks": [],
+    "afterBuildTasks": [],
+    "global": {
+        "$float-abi-type": "softfp",
+        "output-debug-info": "enable",
+        "misc-control": "-fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall -Wextra -ffreestanding -fno-move-loop-invariants"
+    },
+    "c/cpp-compiler": {
+        "language-c": "gnu99",
+        "language-cpp": "gnu++98",
+        "optimization": "level-debug",
+        "warnings": "all-warnings",
+        "one-elf-section-per-function": true,
+        "one-elf-section-per-data": true,
+        "C_FLAGS": "-fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics",
+        "CXX_FLAGS": "-fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics"
+    },
+    "asm-compiler": {
+        "ASM_FLAGS": "-DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=24000000"
+    },
+    "linker": {
+        "output-format": "elf",
+        "remove-unused-input-sections": true,
+        "LD_FLAGS": "-Xlinker --gc-sections -Tmem.ld -Tlibs.ld -Tsections.ld -nostartfiles --specs=nano.specs",
+        "$toolName": "auto"
+    }
+}

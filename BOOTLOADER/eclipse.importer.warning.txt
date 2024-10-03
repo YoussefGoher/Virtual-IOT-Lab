@@ -1,0 +1,219 @@
+!!! Warning !!!
+
+There are some incompatible arguments between 'eclipse' and 'eide', you need check and add them to eide project manually !
+
+When you have solved these incompatible problems, you need delete this note file, otherwise this file will be show again !
+
+---
+
+##### Configurations For All Targets #####
+
+//
+///// Target: 'Debug' /////
+//
+
+Incompatible Args:
+    /:
+        globalArgs:
+            - <Create flash image> = true
+            - <Create extended listing> = undefined
+            - <Print size> = true
+            - <Optimization Level> = ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.debug
+            - <Debug level> = ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.max
+            - <Debug format> = undefined
+            - <Arm family (-mcpu)> = ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m4
+            - <Float ABI> = ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.soft
+            - <undefined> = 435435382
+            - <undefined> = xPack GNU Arm Embedded GCC
+            - <Architecture> = ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm
+            - <Instruction set> = ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb
+            - <Prefix> = arm-none-eabi-
+            - <C compiler> = gcc
+            - <C++ compiler> = g++
+            - <Archiver> = ar
+            - <Hex/Bin converter> = objcopy
+            - <Listing generator> = objdump
+            - <Size command> = size
+            - <Build command> = make
+            - <Remove command> = rm
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs: []
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs:
+            - <Use preprocessor> = true
+        linkerArgs:
+            - <Library search path (-L)> = undefined
+        linkerLibArgs: []
+    system/src/stm32f4-hal:
+        globalArgs:
+            - <Create flash image> = undefined
+            - <Create extended listing> = undefined
+            - <Print size> = undefined
+            - <Optimization Level> = undefined
+            - <Message length (-fmessage-length=0)> = undefined
+            - <'char' is signed (-fsigned-char)> = undefined
+            - <Function sections (-ffunction-sections)> = undefined
+            - <Data sections (-fdata-sections)> = undefined
+            - <Debug level> = undefined
+            - <Debug format> = undefined
+            - <Arm family (-mcpu)> = undefined
+            - <Float ABI> = undefined
+            - <Enable all common warnings (-Wall)> = undefined
+            - <Enable extra warnings (-Wextra)> = undefined
+            - <Assume freestanding environment (-ffreestanding)> = undefined
+            - <Disable loop invariant move (-fno-move-loop-invariants)> = undefined
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs:
+            - <Other warning flags> =   -Wno-unused-parameter -Wno-conversion -Wno-sign-conversion -Wno-bad-function-cast -Wno-unused-variable -Wno-implicit-function-declaration
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs: []
+        linkerArgs: []
+        linkerLibArgs: []
+    system/src/cmsis/system_stm32f4xx.c:
+        globalArgs: []
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs:
+            - <Other warning flags> =   -Wno-padded
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs: []
+        linkerArgs: []
+        linkerLibArgs: []
+    system/src/newlib/startup.c:
+        globalArgs: []
+        cIncDirs: []
+        cMacros:
+            - DEBUG
+            - USE_FULL_ASSERT
+            - TRACE
+            - OS_USE_TRACE_SEMIHOSTING_DEBUG
+            - STM32F401xC
+            - USE_HAL_DRIVER
+            - HSE_VALUE=24000000
+            - OS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS
+        cCompilerArgs: []
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs: []
+        linkerArgs: []
+        linkerLibArgs: []
+    src/stm32f4xx_hal_msp.c:
+        globalArgs: []
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs:
+            - <Other warning flags> =   -Wno-padded -Wno-missing-prototypes -Wno-missing-declarations
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs: []
+        linkerArgs: []
+        linkerLibArgs: []
+
+
+//
+///// Target: 'Release' /////
+//
+
+Incompatible Args:
+    /:
+        globalArgs:
+            - <Create flash image> = true
+            - <Create extended listing> = undefined
+            - <Print size> = true
+            - <Optimization Level> = ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.size
+            - <Debug level> = undefined
+            - <Debug format> = undefined
+            - <Arm family (-mcpu)> = ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m4
+            - <Float ABI> = ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.soft
+            - <undefined> = 435435382
+            - <undefined> = xPack GNU Arm Embedded GCC
+            - <Architecture> = ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm
+            - <Instruction set> = ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb
+            - <Prefix> = arm-none-eabi-
+            - <C compiler> = gcc
+            - <C++ compiler> = g++
+            - <Archiver> = ar
+            - <Hex/Bin converter> = objcopy
+            - <Listing generator> = objdump
+            - <Size command> = size
+            - <Build command> = make
+            - <Remove command> = rm
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs: []
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs:
+            - <Use preprocessor> = true
+        linkerArgs:
+            - <Library search path (-L)> = undefined
+        linkerLibArgs: []
+    system/src/stm32f4-hal:
+        globalArgs:
+            - <Create flash image> = undefined
+            - <Create extended listing> = undefined
+            - <Print size> = undefined
+            - <Optimization Level> = undefined
+            - <Message length (-fmessage-length=0)> = undefined
+            - <'char' is signed (-fsigned-char)> = undefined
+            - <Function sections (-ffunction-sections)> = undefined
+            - <Data sections (-fdata-sections)> = undefined
+            - <Debug level> = undefined
+            - <Debug format> = undefined
+            - <Arm family (-mcpu)> = undefined
+            - <Float ABI> = undefined
+            - <Enable all common warnings (-Wall)> = undefined
+            - <Enable extra warnings (-Wextra)> = undefined
+            - <Assume freestanding environment (-ffreestanding)> = undefined
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs:
+            - <Other warning flags> =   -Wno-unused-parameter -Wno-conversion -Wno-sign-conversion -Wno-bad-function-cast -Wno-unused-variable -Wno-implicit-function-declaration
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs: []
+        linkerArgs: []
+        linkerLibArgs: []
+    system/src/cmsis/system_stm32f4xx.c:
+        globalArgs: []
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs:
+            - <Other warning flags> =   -Wno-padded
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs: []
+        linkerArgs: []
+        linkerLibArgs: []
+    system/src/newlib/startup.c:
+        globalArgs: []
+        cIncDirs: []
+        cMacros:
+            - NDEBUG
+            - STM32F401xC
+            - USE_HAL_DRIVER
+            - HSE_VALUE=24000000
+            - OS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS
+        cCompilerArgs: []
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs: []
+        linkerArgs: []
+        linkerLibArgs: []
+    src/stm32f4xx_hal_msp.c:
+        globalArgs: []
+        cIncDirs: []
+        cMacros: []
+        cCompilerArgs:
+            - <Other warning flags> =   -Wno-padded -Wno-missing-prototypes -Wno-missing-declarations
+        sIncDirs: []
+        sMacros: []
+        assemblerArgs: []
+        linkerArgs: []
+        linkerLibArgs: []
+

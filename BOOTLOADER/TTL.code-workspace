@@ -1,0 +1,15 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.gradle": "gradle",
+            "stm32f4xx.h": "c",
+            "stm32f4xx_hal.h": "c"
+        }
+    },
+    "extensions": {}
+}
